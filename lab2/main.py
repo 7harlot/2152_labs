@@ -1,16 +1,44 @@
-# This is a sample Python script.
+# Rock, Paper, Scissors Game
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# 1. Define the Choices Array
+choices = ["Rock", "Paper", "Scissors"]
 
+# 2. Get Player Input
+playerChoice = input("Select your weapon: (1=Rock, 2=Paper, 3=Scissors): ")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# 3. Convert to Integer
+playerChoice = int(playerChoice)
 
+# 4. Error Handling
+if playerChoice < 1 or playerChoice > 3:
+    print("Error: Choice must be between 1 and 3.")
+else:
+    # 5. Get Computer's Choice (simulated input for now)
+    cpuChoice = input("Enter opponent's choice (1-3): ")
+    cpuChoice = int(cpuChoice)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    if cpuChoice < 1 or cpuChoice > 3:
+        print("Error: Choice must be between 1 and 3.")
+    else:
+        # 6. Array Indexing - subtract 1 for 0-indexed array
+        playerChoiceName = choices[playerChoice - 1]
+        cpuChoiceName = choices[cpuChoice - 1]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        print("You chose: " + playerChoiceName)
+        print("Computer chose: " + cpuChoiceName)
+
+        # 7. Determine the Winner
+        if playerChoice == cpuChoice:
+            print("It's a tie!")
+        elif playerChoice == 1 and cpuChoice == 3:
+            print("Rock beats Scissors - You win!")
+        elif playerChoice == 2 and cpuChoice == 1:
+            print("Paper beats Rock - You win!")
+        elif playerChoice == 3 and cpuChoice == 2:
+            print("Scissors beats Paper - You win!")
+        else:
+            print("You lose!")
+
+        # 8. String Comparison
+        if playerChoiceName != "Rock":
+            print("You didn't pick the classic Rock...")
