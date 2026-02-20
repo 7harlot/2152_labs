@@ -1,0 +1,5 @@
+2026-02-20 13:28:47,ping,github,N/A,Failed
+2026-02-20 13:29:53,ping,google.com,21,Success
+2026-02-20 13:30:00,nslookup,github.com,Not found,Failed
+2026-02-20 13:30:05,ipconfig,all,A8-A1-59-49-DD-A9 / 192.168.0.10,Captured
+2026-02-20 13:30:08,arp,local,7 devices,Captured

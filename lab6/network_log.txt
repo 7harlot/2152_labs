@@ -1,0 +1,14 @@
+[2026-02-20 13:28:47] PING github
+Ping failed: Host unreachable or request timed out.----------------------------------------
+[2026-02-20 13:29:53] PING google.com
+
+Pinging google.com [192.178.192.102] with 32 bytes of data:
+Reply from 192.178.192.102: bytes=32 time=25ms TTL=108
+Reply from 192.178.192.102: bytes=32 time=21ms TTL=108
+Reply from 192.178.192.102: bytes=32 time=17ms TTL=108
+
+Ping statistics for 192.178.192.102:
+    Packets: Sent = 3, Received = 3, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 17ms, Maximum = 25ms, Average = 21ms
+----------------------------------------
