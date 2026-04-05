@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab 11 — Branch Evidence Export</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.5rem; border-bottom: 2px solid #333; padding-bottom: 8px; }
+    h2 { font-size: 1.1rem; margin-top: 32px; color: #444; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+    th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; font-size: 0.9rem; }
+    th { background: #f0f0f0; font-weight: 600; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .label { font-weight: 600; color: #555; min-width: 160px; display: inline-block; }
+    .info-block p { margin: 6px 0; }
+    .note {
+      background: #fffbe6;
+      border-left: 4px solid #f0c040;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+    @media print {
+      body { margin: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lab 11 — Branch &amp; Merge Evidence</h1>
+
+  <div class="info-block">
+    <p><span class="label">Student ID:</span> 101572409</p>
+    <p><span class="label">Last Name:</span> MORRISON</p>
+    <p><span class="label">First Name:</span> BENJAMIN</p>
+    <p><span class="label">Repository:</span> 7harlot / 2152_labs</p>
+    <p><span class="label">Export Date:</span> 2026-04-03</p>
+  </div>
+
+  <div class="note">
+    This document was generated from <code>git reflog</code> and <code>git log</code> to demonstrate that a dedicated <code>lab11</code>
+    branch was created, committed to, merged into <code>main</code>, and then deleted — standard Git workflow.
+    The branch no longer exists as a ref, but all activity is preserved in the reflog below.
+  </div>
+
+  <h2>Branch Lifecycle (git reflog)</h2>
+  <p>These entries are in chronological order and show the complete lifecycle of the <code>lab11</code> branch:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Commit</th>
+        <th>Event</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026-03-29 13:24:48</td>
+        <td><code>a9d49f9</code></td>
+        <td>checkout: moving from <strong>main</strong> → <strong>lab11</strong> (branch created / switched to)</td>
+      </tr>
+      <tr>
+        <td>2026-03-29 13:25:12</td>
+        <td><code>72cfb0f</code></td>
+        <td>commit on <strong>lab11</strong>: "add lab11 OOP starter solutions"</td>
+      </tr>
+      <tr>
+        <td>2026-03-29 13:25:16</td>
+        <td><code>a9d49f9</code></td>
+        <td>checkout: moving from <strong>lab11</strong> → <strong>main</strong> (preparing to merge)</td>
+      </tr>
+      <tr>
+        <td>2026-03-29 13:25:21</td>
+        <td><code>72cfb0f</code></td>
+        <td>merge lab11: Fast-forward (branch successfully merged into <strong>main</strong>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Commit Detail (72cfb0f)</h2>
+  <pre>commit: 72cfb0f79afd5f87f0df4c1b29241a6db9245467
+author:  7harlot &lt;b3n.morrison@gmail.com&gt;
+date:    2026-03-29 13:25:12 -0400
+message: add lab11 OOP starter solutions
+
+Files changed (4):
+  lab11/lab11-instructions.pdf   (new)
+  lab11/lab11_q1_starter.py      84 insertions
+  lab11/lab11_q2_starter.py      89 insertions
+  lab11/lab11_q3_starter.py     103 insertions
+  ────────────────────────────────────────────
+  Total: 4 files, 276 insertions</pre>
+
+  <h2>Raw Reflog Output</h2>
+  <pre>72cfb0f refs/heads/main@{2026-03-29 13:25:21}: merge lab11: Fast-forward
+72cfb0f HEAD@{2026-03-29 13:25:21}: merge lab11: Fast-forward
+a9d49f9 HEAD@{2026-03-29 13:25:16}: checkout: moving from lab11 to main
+72cfb0f HEAD@{2026-03-29 13:25:12}: commit: add lab11 OOP starter solutions
+a9d49f9 HEAD@{2026-03-29 13:24:48}: checkout: moving from main to lab11</pre>
+
+  <h2>Summary</h2>
+  <p>
+    The <code>lab11</code> branch was created at <strong>13:24:48</strong>, work was committed at <strong>13:25:12</strong>,
+    and the branch was merged into <code>main</code> via Fast-forward at <strong>13:25:21</strong> — all on
+    <strong>2026-03-29</strong>. The branch was subsequently deleted after a successful merge, which is
+    correct Git hygiene. The merge commit <code>72cfb0f</code> remains permanently in <code>main</code>'s history.
+  </p>
+
+</body>
+</html>
